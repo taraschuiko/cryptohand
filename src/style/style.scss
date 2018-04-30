@@ -1,0 +1,264 @@
+body {
+	background: #000;
+	color: #FFF;
+}
+
+p {
+	margin: 0;
+	font-size: 12pt;
+}
+
+.slick-prev:before, .slick-next:before {
+	font-size: 40px;
+	width: 100px;
+}
+
+.slick-prev {
+	left: -40px;
+}
+
+.header {
+	padding-top: 15px;
+	font-family: 'Open Sans', sans-serif;
+	
+	.row {
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+
+	&__logo {
+		font-weight: bold;
+		font-size: 27px;
+		position: relative;
+		
+		&:after {
+			content: "";
+			display: block;
+			width: 200px;
+			height: 1px;
+			position: absolute;
+			bottom: -14px;
+			background: #FFF;
+		}
+	}
+
+	.menu {
+		list-style: none;
+		display: flex;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+		-webkit-align-items: center;
+		align-items: center;
+		margin: 0;
+		
+		li {
+			margin: 0 20px;
+			
+			a {
+				color: inherit;
+			}
+		}
+	}
+}
+
+.main {
+	padding-top: 15px;
+	
+	.main-slider {
+		margin: 0 65px;
+		
+		.slick-slide {
+			background: none;
+			margin: 20px 260px;
+			@media screen and (max-width: 1170px) {
+				margin: 20px 60px;
+			}
+		}
+		
+		&-item {
+			background: rgba(256, 256, 256, 0.2);
+			border: 1px solid #fff;
+		}
+
+		.slider-item-top {
+			padding: 15px;
+			padding-bottom: 0;
+		}
+
+		.slider-item-middle {
+			margin-top: 5px;
+			padding: 15px;
+		}
+
+		&-photo {
+			width: calc(20% - 15px);
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			float: left;
+		}
+
+		.name-amount {
+			float: left;
+			width: calc(80% - 15px);
+			margin-left: 10px;
+			text-align: left;
+			position: relative;
+			
+			&:before {
+				content: "";
+				display: block;
+				width: 12px;
+				height: 12px;
+				-webkit-border-radius: 50%;
+				border-radius: 50%;
+				background: #6edb4a;
+				position: absolute;
+				top: 0;
+				left: -20px;
+			}
+		}
+
+		&-name {
+			font-size: 20pt;
+			margin: 0;
+		}
+
+		&-amount {
+			font-size: 34pt;
+			position: relative;
+			display: inline;
+			
+			&:after {
+				content: "Risk (0.03 USD)";
+				font-size: 10pt;
+				position: absolute;
+				width: 100%;
+				right: calc(-100% - 5px);
+				top: calc(50% - 0.7em);
+			}
+		}
+	}
+
+	.divider {
+		width: 100%;
+		height: 1px;
+		background: #FFF;
+	}
+
+	.pick-hand {
+		display: flex;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		padding: 15px 20%;
+		position: relative;
+		
+		&:before {
+			content: "Pick your hand:";
+			position: absolute;
+			top: 10px;
+			left: 15px;
+		}
+		
+		&__rock, &__paper, &__scissors {
+			border: 1px solid #fff;
+			cursor: pointer;
+			font-size: 20pt;
+			background: rgba(256, 256, 256, 0.3);
+			width: 80px;
+			height: 80px;
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-align-items: center;
+			align-items: center;
+			
+			&:hover {
+				background: rgba(256, 256, 256, 0.5);
+			}
+
+			&:active {
+				background: rgba(256, 256, 256, 0.8);
+			}
+		}
+	}
+
+	.tiebreaker {
+		display: flex;
+		position: relative;
+		padding: 15px;
+		
+		&:before {
+			content: "Tiebreaker:";
+			position: absolute;
+			top: 0;
+			left: 15px;
+		}
+
+		#tiebreaker_val {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	}
+
+	#tiebreaker_input {
+		width: 60%;
+		margin-left: 20%;
+		margin-top: 15px;
+		position: relative;
+		cursor: pointer;
+		
+		&:after {
+			content: "0";
+			position: absolute;
+			right: calc(100% + 6px);
+			top: calc(-1em / 4);
+		}
+
+		&:before {
+			content: "100";
+			position: absolute;
+			left: calc(100% + 6px);
+			top: calc(-1em / 4);
+		}
+	}
+
+	.slider-item-buttons {
+		width: 100%;
+		padding: 15px 0;
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		
+		.btn-challenge, .btn-live {
+			width: 20%;
+			padding: 5px;
+			margin: 0 5px;
+			color: #FFF;
+			cursor: pointer;
+		}
+
+		.btn-challenge {
+			background: rgba(256, 256, 256, 0.3);
+			
+			&:hover {
+				background: rgba(256, 256, 256, 0.6);
+			}
+		}
+
+		.btn-live {
+			background: rgba(34, 139, 34, 0.6);
+			
+			&:hover {
+				background: rgba(34, 139, 34, 1);
+			}
+		}
+	}
+}
