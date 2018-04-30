@@ -17,8 +17,8 @@
 		<header class="header">
 			<div class="container">
 				<div class="row">
-					<p class="header__logo col-md-3">CryptoHand</p>
-					<ul class="menu col-md-9 flex-end">
+					<p class="header__logo col-md-3 col-12">CryptoHand</p>
+					<ul class="menu col-md-9 col-12 flex-end">
 						<li><a href="#">Home</a></li>
 						<li><a href="#">What We Do</a></li>
 						<li><a href="#">About Us</a></li>
@@ -27,6 +27,16 @@
 				</div>
 			</div>
 		</header>
+		<nav class="nav">
+			<div class="container">
+				<ul class="nav-menu">
+					<li class="nav-menu_item nav-menu_item--active"><a href="#">Open Games</a></li>
+					<li class="nav-menu_item"><a href="#">My Games</a></li>
+					<li class="nav-menu_item"><a href="#">Top Players</a></li>
+					<li class="nav-menu_item"><a href="#">My Transactions</a></li>
+				</ul>
+			</div>
+		</nav>
 		<main class="main">
 			<div class='main-slider'>
 				<div class="main-slider-item">
@@ -35,6 +45,7 @@
 						<div class="name-amount">
 							<p class="main-slider-name">Jane</p>
 							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
 						</div>
 					</div>
 					<div class="slider-item-middle">
@@ -64,6 +75,7 @@
 						<div class="name-amount">
 							<p class="main-slider-name">Jane</p>
 							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
 						</div>
 					</div>
 					<div class="slider-item-middle">
@@ -79,7 +91,7 @@
 					<div class="tiebreaker">
 						<input type="range" min="0" max="100" class="tiebreaker_input">
 						<p class="tiebreaker_val">50</p>
-						
+
 					</div>
 					<div class="slider-item-buttons">
 						<button class="btn-challenge">Challenge</button>
@@ -93,6 +105,7 @@
 						<div class="name-amount">
 							<p class="main-slider-name">Jane</p>
 							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
 						</div>
 					</div>
 					<div class="slider-item-middle">
@@ -108,7 +121,7 @@
 					<div class="tiebreaker">
 						<input type="range" min="0" max="100" class="tiebreaker_input">
 						<p class="tiebreaker_val">50</p>
-						
+
 					</div>
 					<div class="slider-item-buttons">
 						<button class="btn-challenge">Challenge</button>
@@ -122,6 +135,7 @@
 						<div class="name-amount">
 							<p class="main-slider-name">Jane</p>
 							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
 						</div>
 					</div>
 					<div class="slider-item-middle">
@@ -137,7 +151,37 @@
 					<div class="tiebreaker">
 						<input type="range" min="0" max="100" class="tiebreaker_input">
 						<p class="tiebreaker_val">50</p>
-						
+
+					</div>
+					<div class="slider-item-buttons">
+						<button class="btn-challenge">Challenge</button>
+						<button class="btn-live">Live</button>
+					</div>
+				</div>
+
+				<div class="main-slider-item">
+					<div class="slider-item-top clearfix">
+						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
+						<div class="name-amount">
+							<p class="main-slider-name">Jane</p>
+							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
+						</div>
+					</div>
+					<div class="slider-item-middle">
+						<p class="main-slider-level">Level: Rookie</p>
+						<p class="main-slider-previous">Previous moves: ✊✌✊✋✋✊</p>
+					</div>
+					<div class="divider"></div>
+					<div class="pick-hand">
+						<div class="pick-hand__rock">✊</div>
+						<div class="pick-hand__paper">✋</div>
+						<div class="pick-hand__scissors">✌</div>
+					</div>
+					<div class="tiebreaker">
+						<input type="range" min="0" max="100" class="tiebreaker_input">
+						<p class="tiebreaker_val">50</p>
+
 					</div>
 					<div class="slider-item-buttons">
 						<button class="btn-challenge">Challenge</button>
@@ -147,6 +191,10 @@
 			</div>
 		</main>
 	</div>
+
+	<!-- <div id="auth" class="col-sm-10 col-md-5">
+		
+	</div> -->
 	
 	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
