@@ -177,10 +177,6 @@ p {
 			&:hover {
 				background: rgba(256, 256, 256, 0.5);
 			}
-
-			&:active {
-				background: rgba(256, 256, 256, 0.8);
-			}
 		}
 	}
 
@@ -196,7 +192,7 @@ p {
 			left: 15px;
 		}
 
-		#tiebreaker_val {
+		.tiebreaker_val {
 			position: absolute;
 			left: 50%;
 			top: 0;
@@ -208,7 +204,7 @@ p {
 		}
 	}
 
-	#tiebreaker_input {
+	.tiebreaker_input {
 		width: 60%;
 		margin-left: 20%;
 		margin-top: 15px;
