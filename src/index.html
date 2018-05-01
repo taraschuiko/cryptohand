@@ -39,7 +39,37 @@
 		</nav>
 		<main class="main">
 			<div class='main-slider'>
-				<div class="main-slider-item">
+				<div class="main-slider-item" id="slider-item_0">
+					<div class="slider-item-top clearfix">
+						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
+						<div class="name-amount">
+							<p class="main-slider-name">Julie</p>
+							<p class="main-slider-amount">0.000055 ETH</p>
+							<p class="main-slider-risk">Risk (0.03 USD)</p>
+						</div>
+					</div>
+					<div class="slider-item-middle">
+						<p class="main-slider-level">Level: Rookie</p>
+						<p class="main-slider-previous">Previous moves: ✊✌✊✋✋✊</p>
+					</div>
+					<div class="divider"></div>
+					<div class="pick-hand">
+						<div class="pick-hand__rock">✊</div>
+						<div class="pick-hand__paper">✋</div>
+						<div class="pick-hand__scissors">✌</div>
+					</div>
+					<div class="tiebreaker">
+						<input type="range" min="0" max="100" class="tiebreaker_input">
+						<p class="tiebreaker_val">50</p>
+
+					</div>
+					<div class="slider-item-buttons">
+						<button class="btn-challenge">Challenge</button>
+						<button class="btn-live">Live</button>
+					</div>
+				</div>
+
+				<div class="main-slider-item" id="slider-item_1">
 					<div class="slider-item-top clearfix">
 						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
 						<div class="name-amount">
@@ -69,7 +99,7 @@
 					</div>
 				</div>
 
-				<div class="main-slider-item">
+				<div class="main-slider-item" id="slider-item_2">
 					<div class="slider-item-top clearfix">
 						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
 						<div class="name-amount">
@@ -99,7 +129,7 @@
 					</div>
 				</div>
 
-				<div class="main-slider-item">
+				<div class="main-slider-item" id="slider-item_3">
 					<div class="slider-item-top clearfix">
 						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
 						<div class="name-amount">
@@ -129,37 +159,7 @@
 					</div>
 				</div>
 
-				<div class="main-slider-item">
-					<div class="slider-item-top clearfix">
-						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
-						<div class="name-amount">
-							<p class="main-slider-name">Jane</p>
-							<p class="main-slider-amount">0.000055 ETH</p>
-							<p class="main-slider-risk">Risk (0.03 USD)</p>
-						</div>
-					</div>
-					<div class="slider-item-middle">
-						<p class="main-slider-level">Level: Rookie</p>
-						<p class="main-slider-previous">Previous moves: ✊✌✊✋✋✊</p>
-					</div>
-					<div class="divider"></div>
-					<div class="pick-hand">
-						<div class="pick-hand__rock">✊</div>
-						<div class="pick-hand__paper">✋</div>
-						<div class="pick-hand__scissors">✌</div>
-					</div>
-					<div class="tiebreaker">
-						<input type="range" min="0" max="100" class="tiebreaker_input">
-						<p class="tiebreaker_val">50</p>
-
-					</div>
-					<div class="slider-item-buttons">
-						<button class="btn-challenge">Challenge</button>
-						<button class="btn-live">Live</button>
-					</div>
-				</div>
-
-				<div class="main-slider-item">
+				<div class="main-slider-item" id="slider-item_4">
 					<div class="slider-item-top clearfix">
 						<img src="img/person.jpg" alt="Person" class="main-slider-photo">
 						<div class="name-amount">
@@ -192,9 +192,49 @@
 		</main>
 	</div>
 
-	<!-- <div id="auth" class="col-sm-10 col-md-5">
-		
-	</div> -->
+	<div id="auth" class="col-sm-10 col-md-5 auth">
+		<div class="auth-top">
+			<div id="signup" class="auth-top__button auth-top__button--active">Sign Up</div>
+			<div id="login" class="auth-top__button">Login</div>
+		</div>
+		<div id="signup_tab" class="auth-tab auth-tab--active">
+			<form action="#" name="signup" class="signup-form row" id="signup-form">
+				<div class="signup-form__name">
+					<input type="text" name="firstname" placeholder="First name">
+					<input type="text" name="lastname" placeholder="Last name">
+				</div>
+				<input type="text" name="email" placeholder="Your Email" class="col-12">
+				<input type="text" name="email2" placeholder="Re-enter your Email" class="col-12">
+				<input type="password" name="password" placeholder="New Password" class="col-12">
+				<h3>Birth Date</h3>
+				<div class="signup-form__birth">
+					<input type="number" name="birthmonth" placeholder="Month">
+					<input type="number" name="birthday" placeholder="Day">
+					<input type="number" name="birthyear" placeholder="Year">
+				</div>
+				<div class="signup-form-radio">
+					<div class="signup-form-radio__item">
+						<input type="radio" name="sex" id="sex-male">
+						<label for="sex-male">Male</label>
+					</div>
+					
+					<div class="signup-form-radio__item">
+						<input type="radio" name="sex" id="sex-female">
+						<label for="sex-female">Female</label>
+					</div>
+				</div>
+				<input type="submit" id="signup-form__submit" value="Sign Up">
+			</form>
+		</div>
+		<div id="login_tab" class="auth-tab">
+			<form action="#" name="login" class="login-form row" id="login-form">
+				<input type="text" name="email" placeholder="Your Email" class="col-12">
+				<input type="password" name="password" placeholder="Your Password" class="col-12">
+				<input type="submit" id="login-form__submit" value="Log In">
+			</form>
+		</div>
+	</div>
+	<div class="fade"></div>
 	
 	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

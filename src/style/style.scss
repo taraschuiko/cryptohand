@@ -131,6 +131,12 @@ p {
 	.main-slider {
 		margin: 0 65px;
 		
+		.challenge-message {
+			font-size: 18pt;
+			text-align: center;
+			margin-top: 20px;
+		}
+		
 		@media screen and (max-width: 576px) {
 			margin: 0 30px;
 		}
@@ -150,6 +156,7 @@ p {
 		&-item {
 			background: rgba(256, 256, 256, 0.2);
 			border: 1px solid #fff;
+			position: relative;
 		}
 
 		.slider-item-top {
@@ -369,8 +376,138 @@ p {
 	}
 }
 
-#auth {
-	background: #FFF;
-	padding: 40px;
+.fade {
+	background: #000;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 65;
+}
+
+.auth {
+	border: 1px solid #fff;
+	background: #333333;
+	padding: 15px;
+	position: absolute;
+	z-index: 66;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	
+	&-top {
+		display: flex;
+		
+		&__button {
+			width: 50%;
+			padding: 20px;
+			text-align: center;
+			font-size: 18pt;
+			cursor: pointer;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&--active {
+				font-weight: bold;
+				cursor: default;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&-tab {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+
+		.signup-form, .login-form {
+			display: flex;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			padding: 20px;
+
+			input {
+				background: #5d5d5d;
+				border: 1px solid #fff;
+				padding: 12px;
+				margin: 6px 0;
+				color: #FFF;
+				
+				&::placeholder {
+					color: #FFF;
+					opacity: 0.6;
+				}
+			}
+
+			&__name {
+				display: flex;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+				
+				input {
+					width: 48%;
+				}
+			}
+
+			h3 {
+				text-align: center;
+				font-weight: normal;
+				margin-top: 12px;
+			}
+
+			&__birth {
+				display: flex;
+				-webkit-justify-content: space-between;
+				justify-content: space-between;
+
+				input {
+					width: 30%;
+				}
+			}
+
+			&-radio {
+				display: flex;
+				margin-bottom: 6px;
+
+				&__item {
+					padding-right: 24px;
+					display: flex;
+					-webkit-align-items: center;
+					align-items: center;
+					
+					label {
+						margin: 0;
+						margin-left: 6px;
+						color: #FFF;
+						opacity: 0.6;
+						
+					}
+				}
+			}
+
+			input[type=submit] {
+				background: #1A6799;
+				font-size: 20pt;
+				cursor: pointer;
+				
+				&:hover {
+					background: darken(#1A6799, 8%);
+				}
+			}
+		}
+	}
 }
