@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 			));
 
 		$(this).closest('.main-slider-item').append($.parseHTML(
-			'<div class="etherum-amount"><p>Etherum: </p><input type="number" placeholder="Type Amount" class="etherum-amount-input"></div>'
+			'<div class="etherum-amount"><p>Etherum: </p><input type="number" placeholder="Type Amount" class="etherum-amount-input">&nbspETH</div>'
 			));
 
 		$(this).closest('.main-slider-item').append($.parseHTML(
@@ -140,17 +140,34 @@ jQuery(document).ready(function($) {
 
 	$(document).on('click', '.send-request-btn', function(event) {
 		etherumAmount = $(this).closest('.main-slider-item').find('.etherum-amount-input').val();
-		var hideSelectors = '#' + $(this).closest('.main-slider-item').attr('id') + ' p' + ', ' +
-		'#' + $(this).closest('.main-slider-item').attr('id') + ' .match-length-choose' + ', ' +
-		'#' + $(this).closest('.main-slider-item').attr('id') + ' .etherum-amount' + ', ' +
-		'#' + $(this).closest('.main-slider-item').attr('id') + ' .send-request-btn';
-		$(hideSelectors).css('display', 'none');
-		$(this).closest('.main-slider-item').find('.name-amount').append($.parseHTML(
-			'<p>Waiting for ' + name + ' Confirmation</p>' +
-			'<p class="waiting-stats">'+matchLength+'</p><p class="waiting-stats">'+etherumAmount+'</p>'
-			));
 
-		$(this).closest('.main-slider-item').append($.parseHTML('<button class="waiting-cancel clearfix">Cancel</button>'));
-		
+		if (matchLength != 0 && etherumAmount > 0) {
+			var hideSelectors = '#' + $(this).closest('.main-slider-item').attr('id') + ' p' + ', ' +
+			'#' + $(this).closest('.main-slider-item').attr('id') + ' .match-length-choose' + ', ' +
+			'#' + $(this).closest('.main-slider-item').attr('id') + ' .etherum-amount' + ', ' +
+			'#' + $(this).closest('.main-slider-item').attr('id') + ' .send-request-btn';
+			$(hideSelectors).css('display', 'none');
+			$(this).closest('.main-slider-item').find('.name-amount').append($.parseHTML(
+				'<p>Waiting for ' + name + ' Confirmation</p>' +
+				'<p class="waiting-stats">'+matchLength+'</p><p class="waiting-stats">'+etherumAmount+' ETH</p>'
+				));
+
+			$(this).closest('.main-slider-item').append($.parseHTML(
+				'<div class="waiting-countdown">60</div>'
+				));
+
+			$(this).closest('.main-slider-item').append($.parseHTML('<button class="waiting-cancel clearfix">Cancel</button>'));
+
+			var countdownElement = $(this).closest('.main-slider-item').find('.waiting-countdown');
+
+		} else {
+			$(this).closest('.main-slider-item').append($.parseHTML(
+				'<p>Select match length and Etherum amount</p>'
+				));
+		}
+	});
+
+	$(document).on('click', '.waiting-cancel', function(event) {
+		location.reload();
 	});
 });

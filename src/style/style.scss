@@ -418,6 +418,10 @@ p {
 			margin-left: 15px;
 			cursor: pointer;
 			padding: 6px;
+			
+			&:hover {
+				background: rgba(256, 256, 256, 0.4);
+			}
 		}
 
 		.waiting-stats {
@@ -425,20 +429,49 @@ p {
 			float: left;
 			padding: 4px 10px;
 			background: #002604;
+			border: 1px solid #fff;
+		}
+
+		.waiting-countdown {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+			font-size: 80px;
+			background: rgba(256, 256, 256, 0.4);
+			-webkit-border-radius: 50%;
+			        border-radius: 50%;
+			border: 3px dotted #fff;
+			display: flex;
+			-webkit-justify-content: center;
+			        justify-content: center;
+			-webkit-align-items: center;
+			        align-items: center;
 		}
 
 		.waiting-cancel {
 			padding: 4px 10px;
-			background: rgba(256, 256, 256, 0.4);
+			background: rgba(256, 256, 256, 0.3);
 			color: #fff;
 			position: absolute;
 			bottom: 15px;
 			left: 50%;
+			cursor: pointer;
 			-webkit-transform: translateX(-50%);
 			   -moz-transform: translateX(-50%);
 			    -ms-transform: translateX(-50%);
 			     -o-transform: translateX(-50%);
 			        transform: translateX(-50%);
+			
+			&:hover {
+				background: rgba(256, 256, 256, 0.4);
+			}
 		}
 	}
 }
