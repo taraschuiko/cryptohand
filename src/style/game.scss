@@ -1,0 +1,107 @@
+.main-game {
+	height: 75vh;
+	width: 100%;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+}
+
+.game {
+	&-photo {
+		&-score {
+			display: none;
+			font-size: 40pt;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		img {
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			position: relative;
+		}
+	}
+
+	&-center {
+		text-align: center;
+		display: flex;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: center;
+		justify-content: center;
+		
+		h2 {
+			font-size: 35pt;
+		}
+
+		h1 {
+			text-transform: uppercase;
+			font-size: 80pt;
+		}
+
+		.waiting-countdown {
+			margin: 20px auto;
+			width: 200px;
+			height: 200px;
+			font-size: 80px;
+			background: rgba(256, 256, 256, 0.4);
+			-webkit-border-radius: 50%;
+			border-radius: 50%;
+			border: 3px dotted #fff;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	}
+
+	&-select {
+		height: 100%;
+		display: none; //flex
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		-webkit-align-items: center;
+		align-items: center;
+		
+		&-item {
+			background: #333;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-align-items: center;
+			align-items: center;
+			font-size: 40pt;
+			cursor: pointer;
+			border: 1px solid #fff;
+			
+			&:hover {
+				background: lighten(#333, 10%);
+			}
+		}
+
+		&-no {
+			.game-select-item {
+				cursor: default;
+				&:hover {
+					background: #333;
+				}
+			}
+		}
+	}
+}
