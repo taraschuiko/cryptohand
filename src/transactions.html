@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="style/style.min.css">
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<p class="header__logo col-md-3 col-12">CryptoHand</p>
+					<ul class="menu col-md-9 col-12 flex-end">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">What We Do</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Jasper</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<nav class="nav">
+			<div class="container">
+				<ul class="nav-menu">
+					<li class="nav-menu_item"><a href="index.html">Open Games</a></li>
+					<li class="nav-menu_item"><a href="#">My Games</a></li>
+					<li class="nav-menu_item"><a href="#">Top Players</a></li>
+					<li class="nav-menu_item nav-menu_item--active"><a href="#">My Transactions</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main class="main">
+			<div class="container">
+				<div class="main-transaction row">
+					<ul class="transaction-list col-md-8">
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>- 0.001000</p>
+						</li>
+						<li>
+							<img src="img/person.jpg" alt="image">
+							<p>+ 0.001000</p>
+						</li>
+					</ul>
+					<div class="balance col-12 col-md-4">
+						<div class="user-photo"><img src="img/person2.jpg" alt="My photo"></div>
+						<p class="balance-title">Balance</p>
+						<div class="balance-info">
+							<p>ETH: <span class="eth-bal">5.001350</span></p>
+							<p>Last 10 Games: <span class="last-games-percent">+37%</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$('.transaction-list p, span.last-games-percent').each(function(index, el) {
+				if ($(this).text().slice(0, 1) == '+') {
+					$(this).css('color', '#278015');
+				} else if ($(this).text().slice(0, 1) == '-') {
+					$(this).css('color', '#c6382b');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

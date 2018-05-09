@@ -10,10 +10,20 @@
 }
 
 .game {
+	&-result {
+		.game-photo img {
+			filter: opacity(50%);
+		}
+
+		.game-photo-score {
+			display: inline;
+		}
+	}
+
 	&-photo {
 		&-score {
 			display: none;
-			font-size: 40pt;
+			font-size: 50pt;
 			position: absolute;
 			left: 50%;
 			top: 50%;
@@ -63,6 +73,11 @@
 			justify-content: center;
 			-webkit-align-items: center;
 			align-items: center;
+		}
+
+		.win-medal {
+			width: 12%;
+			margin: 0 auto;
 		}
 	}
 
